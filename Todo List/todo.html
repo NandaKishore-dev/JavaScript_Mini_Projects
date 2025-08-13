@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+       <div class="todobg">
+           <h1>Todo List<img src="notes1.png" alt="notes.png"></h1>
+            <div class="inputField">
+                <input type="text" id="input" placeholder="Enter New Task">
+                <button id="addbtn" onclick="addtask()">Add</button>
+            </div>
+            <ul id="tasks">
+               <!--<li class="checked">Sample Task 1</li>
+                <li>Sample Task 2</li>
+                <li>Sample Task 3</li>-->
+            </ul>
+       </div>
+   </div>
+<script src="todo.js"></script>
+</body>
+</html>

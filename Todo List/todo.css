@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mozilla Headline", "Mozilla Text", "Roboto", sans-serif;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg,rgb(13, 0, 67), rgb(111, 0, 176));
+    padding: 10px;
+
+}
+.todobg {
+    background:white;
+    margin: 50px;
+    border-radius: 8px;
+    min-width: 300px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.todobg h1 {
+    display: flex;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color:rgb(13, 0, 67)
+}
+.todobg img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.inputField {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 30px;
+}
+.inputField input {
+   flex: 1;
+   border-radius: 30px;
+   padding: 10px 20px;
+   border: 1px solid rgb(159, 159, 161);
+   box-shadow: 1px 1px 1px  rgb(159, 159, 161);
+}
+.inputField button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 1px 1px 1px  rgb(159, 159, 161);
+    background-color:rgb(79, 0, 124);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.inputField input:hover{
+    border: 1px solid rgb(97, 97, 97);
+    box-shadow: 1px 3px 3px  rgb(139, 139, 139);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+.inputField button:hover{
+    border: 1px solid rgb(97, 97, 97);
+    box-shadow: 1px 3px 3px  rgb(139, 139, 139);
+    background-color: rgb(64, 0, 101);
+    transition: border 0.5s, box-shadow 0.5s background-color 0.5s;
+}
+.inputField input:active{
+    border: 0px;
+    box-shadow: 1px 5px 5px  rgb(139, 139, 139);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+.inputField button:active{
+    background-color: rgb(39, 0, 62);
+    color: rgb(197, 197, 197);
+    transition: background-color 0.3s, color 0.3s;
+}
+ul li {
+    list-style: none;
+    padding: 20px 50px 20px 100px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li:hover {
+    background-color: #c3c3c3;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    height: 50%;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+}
+ul li.checked {
+    text-decoration: line-through;
+    color: rgb(88, 88, 88);
+    padding: 20px 50px 20px 100px;
+}
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+ul li span {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+}
