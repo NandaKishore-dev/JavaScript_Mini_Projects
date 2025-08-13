@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", "Mozilla Headline", "Mozilla Text", "Roboto", sans-serif;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #9deaff, #e795fe);
+    position: relative;
+}
+.clock {
+    width: 600px;
+    height: 200px;
+    position:absolute;
+    background: linear-gradient(45deg,rgb(140, 135, 135),rgb(0, 0, 0));
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 625px;
+    height: 225px;
+    background:linear-gradient(90deg,rgb(248, 248, 120),rgb(193, 156, 89));
+    border-radius: 20px;
+    z-index: -1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+}
+.time {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.time span {
+    font-size: 80px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    color: whitesmoke;
+}
+.time span#hours::after {
+    content: 'HOURS';
+    font-size: 16px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.time span#mins::after {
+    content: 'MINUTES';
+    font-size: 16px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.time span#secs::after {
+    content: 'SECONDS';
+    font-size: 16px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform:translateX(-50%);
+}
